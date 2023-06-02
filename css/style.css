@@ -17,15 +17,18 @@
     width: 60px;
     height: 80px;
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     animation: obstaculo-animacao 0.8s linear infinite; 
+    display: block;
 }
 
 .patrick {
-    width: 285px;
+    width: 140px;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     background-color: transparent;
+    left: 100px;
+    display: block;
 }
 
 .pulo {
@@ -34,6 +37,10 @@
 
 .pulo-dead {
     animation: pulo-dead 1s ease-out;
+}
+
+.obstaculo.hidden, .patrick.hidden {
+    display: none;
 }
 
 
