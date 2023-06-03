@@ -13,13 +13,54 @@
     overflow: hidden;
 }
 
+.start {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 420px;
+    left: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: palevioletred;
+    transform: scale(1.1);
+}
+
+.restart {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 460px;
+    left: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.restart:hover {
+    background-color: palevioletred;
+    transform: scale(1.1);
+}
 .obstaculo {
     width: 60px;
     height: 80px;
     position: absolute;
     bottom: 2px;
-    animation: obstaculo-animacao 0.8s linear infinite; 
-    display: block;
+    animation: obstaculo-animacao 0.9s linear infinite; 
+    display: none;
 }
 
 .patrick {
@@ -32,7 +73,7 @@
 }
 
 .pulo {
-    animation: pulo 500ms ease-out;
+    animation: pulo 600ms ease-out;
 }
 
 .pulo-dead {
@@ -57,9 +98,6 @@ right: 100%;
 0% {
 bottom: 0;
 } 
-40% {   
-bottom: 140px;
-}
 50% {
 bottom: 140px;
 } 
