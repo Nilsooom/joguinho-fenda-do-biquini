@@ -3,7 +3,7 @@ const aguaViva = document.querySelector('.obstaculo')
 const gameOver = document.querySelector('.fundo')
 const inicio = document.getElementById('play')
 const reiniciar = document.getElementById('restart')
-
+const telaTouch = document.getElementById('gameBoard')
 
 let jogoAcabou = false
 function pular (){
