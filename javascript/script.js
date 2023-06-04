@@ -49,7 +49,7 @@ function jogo (){
   
   // Adicione a classe hidden ao obstáculo e ao Patrick para sumir.
       setTimeout(()=>{
-        patrick.classList.add('hidden');
+        patrick.classList.add('hidden')
       }, 1500)
   
       clearInterval(loop)
@@ -62,5 +62,7 @@ reiniciar.onclick = ()=>{
   location.reload()
 }
 inicio.addEventListener('click', jogo) 
+inicio.addEventListener('touchend', jogo)
+reiniciar.addEventListener('touchend, () => { location.reload() })
 document.addEventListener('keydown', pular)
-document.addEventListener('touchstart', pular);
+document.addEventListener('touchstart', pular)
