@@ -28,11 +28,11 @@ function jogo (){
 
   aguaViva.style.display = 'block'
 
-  const loop = setInterval(()=>{
+    const loop = setInterval(()=>{
     const posicaoObstaculo = aguaViva.offsetLeft // distancia do obstaculo a esquerda
-    const posicaoPatrick = +window.getComputedStyle(patrick).bottom.replace('px', '') // referencia o pulo do bob
+    const posicaoPatrick = +window.getComputedStyle(patrick).bottom.replace('px', '') // referencia o pulo do patrik
 
-    if (posicaoObstaculo <= 235  && posicaoObstaculo > 0 && posicaoPatrick < 82){
+    if (posicaoObstaculo <= 225  && posicaoObstaculo > 0 && posicaoPatrick < 72){
       jogoAcabou = true
       aguaViva.style.animation = 'none' // para a animação do obstaculo
       aguaViva.style.display = 'none' // esconde o obstaculo
