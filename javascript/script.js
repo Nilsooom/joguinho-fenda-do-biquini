@@ -58,11 +58,10 @@ function jogo (){
 }
 
 
-reiniciar.onclick = ()=>{
-  location.reload()
-}
+
 inicio.addEventListener('click', jogo) 
 inicio.addEventListener('touchend', jogo)
-reiniciar.addEventListener('touchend, () => { location.reload() })
+reiniciar.addEventListener('click', ()=> { location.reload() } )
+reiniciar.addEventListener('touchend', () => { location.reload() } )
 document.addEventListener('keydown', pular)
 telaTouch.addEventListener('touchstart', pular)
