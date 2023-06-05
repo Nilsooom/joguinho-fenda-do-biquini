@@ -3,7 +3,7 @@ const aguaViva = document.querySelector('.obstaculo')
 const gameOver = document.querySelector('.fundo')
 const inicio = document.getElementById('play')
 const reiniciar = document.getElementById('restart')
-
+const telaTouch = document.getElementById('gameTouch')
 
 let jogoAcabou = false
 function pular (){
@@ -28,11 +28,11 @@ function jogo (){
 
   aguaViva.style.display = 'block'
 
-  const loop = setInterval(()=>{
+    const loop = setInterval(()=>{
     const posicaoObstaculo = aguaViva.offsetLeft // distancia do obstaculo a esquerda
-    const posicaoPatrick = +window.getComputedStyle(patrick).bottom.replace('px', '') // referencia o pulo do bob
+    const posicaoPatrick = +window.getComputedStyle(patrick).bottom.replace('px', '') // referencia o pulo do patrik
 
-    if (posicaoObstaculo <= 235  && posicaoObstaculo > 0 && posicaoPatrick < 82){
+    if (posicaoObstaculo <= 225  && posicaoObstaculo > 0 && posicaoPatrick < 72){
       jogoAcabou = true
       aguaViva.style.animation = 'none' // para a animação do obstaculo
       aguaViva.style.display = 'none' // esconde o obstaculo
@@ -49,7 +49,7 @@ function jogo (){
   
   // Adicione a classe hidden ao obstáculo e ao Patrick para sumir.
       setTimeout(()=>{
-        patrick.classList.add('hidden');
+        patrick.classList.add('hidden')
       }, 1500)
   
       clearInterval(loop)
@@ -57,26 +57,11 @@ function jogo (){
   }, 10)
 }
 
-// function reiniciarJogo() {
-//   jogoAcabou = false;
-
-//   aguaViva.classList.remove('hidden'); 
-//   patrick.classList.remove('hidden');
-//   aguaViva.style.animation = 'obstaculo-animacao 1s linear infinite';
-//   patrick.style.bottom = '-1px';
-  
-//   patrick.classList.add('');
-//   patrick.src = "./imagens/patrick-star.gif";
-//   patrick.style.width = '140px';
-//   patrick.style.left = '100px';
-//   gameOver.src = "./imagens/fundo-do-mar.jpg";
-//   gameOver.style.width = '100%';
-//   gameOver.style.height = '400px';
-// } projeto furuto.
 
 
-reiniciar.onclick = ()=>{
-  location.reload()
-}
 inicio.addEventListener('click', jogo) 
+inicio.addEventListener('touchend', jogo)
+reiniciar.addEventListener('click', ()=> { location.reload() } )
+reiniciar.addEventListener('touchend', () => { location.reload() } )
 document.addEventListener('keydown', pular)
+telaTouch.addEventListener('touchstart', pular)
