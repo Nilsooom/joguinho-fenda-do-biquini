@@ -57,8 +57,7 @@ function jogo (){
   }, 10)
 }
 
-
-
+// Botões e controle de eventos
 inicio.addEventListener('click', jogo) 
 inicio.addEventListener('touchend', jogo)
 reiniciar.addEventListener('click', ()=> { location.reload() } )
